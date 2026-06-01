@@ -110,3 +110,6 @@ Multilingual Interview Support
 AI Career Mentor
 Video Resume Analysis
 Industry-Specific Interview Models
+
+
+⭐ If you like this project, give it a star!
