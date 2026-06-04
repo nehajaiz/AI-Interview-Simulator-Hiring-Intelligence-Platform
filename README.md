@@ -113,6 +113,11 @@ Industry-Specific Interview Models
 
 📸 Screenshot
 
+
+🌐 Live Demo
+
+https://github.com/nehajaiz/AI-Interview-Simulator-Hiring-Intelligence-Platform/
+
 ⭐ If you like this project, give it a star!
 
 📧 Contact
