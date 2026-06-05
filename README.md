@@ -6,6 +6,7 @@ AI Interview Simulator & Hiring Intelligence Platform is an AI-powered recruitme
 The platform combines Resume Intelligence, AI Mock Interviews, Speech Analysis, Video Analytics, Skill Gap Detection, and Candidate Scoring into a single system that enhances both candidate preparation and hiring efficiency.
 
 ✨ Key Features
+
 📄 Resume Intelligence
 Resume Upload (PDF/DOCX)
 Resume Parsing & Information Extraction
