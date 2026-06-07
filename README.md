@@ -120,8 +120,10 @@ Industry-Specific Interview Models
 
 https://github.com/nehajaiz/AI-Interview-Simulator-Hiring-Intelligence-Platform/
 
-⭐ If you like this project, give it a star!
 
 📧 Contact
 
 Email: nehajaiswal593593@gmail.com
+
+
+⭐ If you like this project, give it a star!
