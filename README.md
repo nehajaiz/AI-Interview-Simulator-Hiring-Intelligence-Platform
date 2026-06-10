@@ -46,72 +46,97 @@ Ranking Leaderboard
 Hiring Insights & Reports
 🛠 Tech Stack
 
-Frontend
+## Project Structure
 
-React.js
-TypeScript
-Tailwind CSS
-Chart.js
+```
+ai-interview-platform/
+├── backend/
+│   ├── app/
+│   │   ├── api/v1/endpoints/      # Route handlers
+│   │   │   ├── auth.py            # Login, signup, JWT, /me
+│   │   │   ├── resumes.py         # Upload, list, delete, set-primary
+│   │   │   ├── questions.py       # Question generation endpoints
+│   │   │   └── recruiter_dashboard.py  # Ranking, analytics, history
+│   │   ├── core/
+│   │   │   ├── config.py          # Pydantic settings (env vars)
+│   │   │   └── security.py        # JWT, password hashing, role deps
+│   │   ├── db/session.py          # Async SQLAlchemy engine + session
+│   │   ├── models/                # SQLAlchemy ORM models
+│   │   │   ├── user.py
+│   │   │   ├── resume.py
+│   │   │   ├── interview.py
+│   │   │   ├── interview_score.py
+│   │   │   ├── skill.py
+│   │   │   ├── job_role.py
+│   │   │   └── analytics.py
+│   │   ├── schemas/               # Pydantic request/response models
+│   │   ├── services/
+│   │   │   ├── ai/                # Resume intelligence, ATS, questions
+│   │   │   │   ├── resume_intelligence_service.py
+│   │   │   │   ├── ats_scorer.py
+│   │   │   │   ├── question_generator.py
+│   │   │   │   ├── education_extractor.py
+│   │   │   │   ├── experience_extractor.py
+│   │   │   │   ├── project_extractor.py
+│   │   │   │   ├── skills_extractor.py
+│   │   │   │   └── embeddings.py
+│   │   │   ├── analytics/         # Candidate scoring, dashboard queries
+│   │   │   │   ├── candidate_scoring_service.py
+│   │   │   │   ├── dimension_scorers.py
+│   │   │   │   ├── evidence_collector.py
+│   │   │   │   └── dashboard_query_service.py
+│   │   │   ├── interview/         # Speech & webcam analysis
+│   │   │   │   ├── speech_analysis_service.py
+│   │   │   │   ├── transcription_engine.py
+│   │   │   │   ├── filler_detector.py
+│   │   │   │   ├── speech_metrics.py
+│   │   │   │   ├── confidence_scorer.py
+│   │   │   │   ├── webcam_analytics_service.py
+│   │   │   │   ├── face_detector.py
+│   │   │   │   ├── eye_contact_analyser.py
+│   │   │   │   └── emotion_detector.py
+│   │   │   └── storage/           # S3 / local file storage
+│   │   │       ├── storage_service.py
+│   │   │       └── extraction_service.py  # PyMuPDF + python-docx
+│   │   └── main.py                # FastAPI app factory, middleware
+│   ├── migrations/                # Alembic migration scripts
+│   ├── requirements.txt
+│   ├── alembic.ini
+│   ├── Dockerfile
+│   └── Dockerfile.dev
+│
+├── frontend/
+│   ├── src/
+│   │   ├── pages/
+│   │   │   ├── auth/AuthPage.jsx           # Login + signup UI
+│   │   │   ├── candidate/ResumeUploadPage.jsx
+│   │   │   └── recruiter/RecruiterDashboard.jsx
+│   │   ├── services/api/index.ts           # Axios + all API calls
+│   │   ├── store/slices/authStore.ts       # Zustand auth state
+│   │   ├── App.tsx                         # Router
+│   │   ├── main.tsx                        # Entry point
+│   │   └── index.css
+│   ├── public/index.html
+│   ├── package.json
+│   ├── vite.config.ts
+│   ├── tailwind.config.ts
+│   ├── tsconfig.json
+│   ├── nginx.conf                          # Production Nginx config
+│   ├── Dockerfile
+│   └── Dockerfile.dev
+│
+├── infrastructure/
+│   ├── postgres/init.sql          # Extensions + app_user role
+│   └── redis/redis.conf           # Persistence, memory policy
+│
+├── docker-compose.yml             # Production stack
+├── docker-compose.dev.yml         # Dev overrides (hot-reload, pgAdmin, Flower)
+├── .env.docker                    # Environment template
+├── .dockerignore
+└── README.md
+```
 
-Backend
-
-FastAPI
-Python
-
-AI/ML
-
-Transformers
-Sentence Transformers
-OpenCV
-MediaPipe
-Whisper
-
-Database
-
-PostgreSQL
-Redis
-
-DevOps
-
-Docker
-GitHub Actions
-🏗 System Workflow
-Resume Upload
-      ↓
-Resume Analysis & ATS Scoring
-      ↓
-AI Interview Generation
-      ↓
-Speech & Video Analysis
-      ↓
-Candidate Evaluation
-      ↓
-Skill Gap Detection
-      ↓
-Recruiter Dashboard & Hiring Insights
-🎯 Project Objectives
-Improve interview preparation using AI.
-Automate candidate evaluation and ranking.
-Provide objective hiring insights.
-Reduce recruiter workload.
-Deliver personalized feedback and learning recommendations.
-📚 Learning Outcomes
-
-This project demonstrates practical implementation of:
-
-Machine Learning
-Natural Language Processing (NLP)
-Computer Vision
-Speech Processing
-Full-Stack Development
-MLOps & Deployment
-AI-Powered Decision Systems
-🚀 Future Enhancements
-AI Coding Interview Evaluator
-Multilingual Interview Support
-AI Career Mentor
-Video Resume Analysis
-Industry-Specific Interview Models
+---
 
 📸 Screenshot
 
