@@ -9,8 +9,11 @@ The platform combines Resume Intelligence, AI Mock Interviews, Speech Analysis, 
 ✨ Key Features
 
 📄 Resume Intelligence
+
 Resume Upload (PDF/DOCX)
+
 Resume Parsing & Information Extraction
+
 Skill, Education, Experience & Project Detection
 ATS Compatibility Scoring
 Job Description Matching
@@ -20,6 +23,7 @@ Technical Interview Simulation
 Behavioral Interview Questions
 Dynamic Follow-up Questions
 Real-Time Feedback
+
 🎤 Speech Intelligence
 Speech-to-Text Conversion
 Filler Word Detection
