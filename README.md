@@ -25,10 +25,16 @@ Dynamic Follow-up Questions
 Real-Time Feedback
 
 🎤 Speech Intelligence
+
 Speech-to-Text Conversion
+
 Filler Word Detection
+
 Speaking Speed Analysis
+
 Communication & Confidence Scoring
+
+
 📹 Video Intelligence
 Face Detection
 Eye Contact Tracking
